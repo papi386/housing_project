@@ -1,0 +1,31 @@
+# Dépendances pour le pipeline de preprocessing avec LLM local
+
+# Core dependencies
+pandas>=2.0.0
+numpy>=1.24.0
+
+# LLM local (llama-cpp-python)
+llama-cpp-python>=0.2.0
+
+# ML Models
+xgboost>=2.0.0
+scikit-learn>=1.3.0
+joblib>=1.3.0
+
+# Optional: pour améliorer les performances
+matplotlib>=3.7.0    # Pour les visualisations
+seaborn>=0.12.0      # Pour les visualisations avancées
+
+# Notes d'installation:
+# 
+# Installation standard:
+#   pip install -r requirements.txt
+#
+# Installation avec support GPU (CUDA):
+#   CMAKE_ARGS="-DLLAMA_CUDA=on" pip install llama-cpp-python --force-reinstall --no-cache-dir
+#
+# Installation avec support Metal (macOS):
+#   CMAKE_ARGS="-DLLAMA_METAL=on" pip install llama-cpp-python --force-reinstall --no-cache-dir
+#
+# Installation avec support OpenBLAS (CPU optimisé):
+#   CMAKE_ARGS="-DLLAMA_BLAS=ON -DLLAMA_BLAS_VENDOR=OpenBLAS" pip install llama-cpp-python --force-reinstall --no-cache-dir
